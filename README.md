@@ -39,6 +39,15 @@ A full-stack web application where users can browse, create, edit, and review ca
 
 ---
 
+## 🖼️ Screenshots
+
+<img src="screenshots/HomePage.png" alt="Homepage" width="600"/>
+<img src="screenshots/Campgrounds.png" alt="Campground Form" width="600"/>
+
+📸 View more screenshots in the [`screenshots/`](./screenshots) folder.
+
+---
+
 ## ⚙️ Installation
 
 ### 1. Clone the repo
@@ -46,3 +55,14 @@ A full-stack web application where users can browse, create, edit, and review ca
 ```bash
 git clone https://github.com/georgebetsios/YelpCamp.git
 cd YelpCamp
+npm install
+Create .env file and add:
+CLOUDINARY_CLOUD_NAME=your_name
+CLOUDINARY_KEY=your_key
+CLOUDINARY_SECRET=your_secret
+DB_URL=mongodb://127.0.0.1:27017/yelp-camp
+SECRET=your_session_secret
+
+node seeds/index.js
+npm run start
+

@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== "production") {  //if we are not in production environment loading .env
     require('dotenv').config();
 }
 
@@ -35,8 +35,8 @@ db.once("open", () => {
 
 const app = express();
 
-app.engine('ejs', ejsMate);
-app.set('view engine', 'ejs');
+app.engine('ejs', ejsMate);// χρησιμοποιεί το ejs-mate για layout inheritance
+app.set('view engine', 'ejs');// ορίζεις ejs ως template engine
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }));

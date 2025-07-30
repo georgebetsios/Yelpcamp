@@ -15,8 +15,8 @@ const sample = array => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
     await Campground.deleteMany({});
-    for (let i = 0; i < 300; i++) {
-        const random1000 = Math.floor(Math.random() * 1000);
+    for (let i = 0; i < 50; i++) {
+        const random1000 = Math.floor(Math.random() * 500);
         const price = Math.floor(Math.random() * 20) + 10;
         const camp = new Campground({
             //YOUR USER ID
@@ -34,12 +34,12 @@ const seedDB = async () => {
             },
             images: [
                 {
-                    url: 'https://res.cloudinary.com/dq5max8fc/image/upload/v1749464871/Yelpcamp/n441lhgqmjltxcarntjb.jpg',
-                    filename: 'Yelpcamp/n441lhgqmjltxcarntjb',
+                    url: 'https://res.cloudinary.com/dq5max8fc/image/upload/v1753890739/Camping-tent_po7g2v.png',
+                    filename: 'Camping-tent_po7g2v',
                 },
                 {
-                    url: 'https://res.cloudinary.com/dq5max8fc/image/upload/v1749464870/Yelpcamp/lahwdi8pt5bqkz6ddbjk.png',
-                    filename: 'Yelpcamp/lahwdi8pt5bqkz6ddbjk',
+                    url: 'https://res.cloudinary.com/dq5max8fc/image/upload/v1753890702/how-to-make-your-camping-trip-more-comfortable-ZF_ujclms.jpg',
+                    filename: 'how-to-make-your-camping-trip-more-comfortable-ZF_ujclms',
                 }
             ]
         })
